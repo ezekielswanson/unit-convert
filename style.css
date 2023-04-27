@@ -7,12 +7,42 @@
 
 }
 
+body {
+    background-color: #000;
+
+}
+
 
 .main-container {
-    background-color: #000;
     display: grid;
     align-items: center;
+    padding: 126px 76px;
+    justify-content: center;
 
+}
+
+.main-container .unit-converter__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.unit-converter__container .unit-converter__top {
+    background-color: #6943FF;
+    padding: 34px 51px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.unit-converter__container .unit-converter__top h1 {
+    color: #fff;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 38px;
+    letter-spacing: -0.03em;
+    margin-bottom: 30px;
 }
 
 
