@@ -29,9 +29,10 @@ body {
 .unit-converter__container .unit-converter__top {
     background-color: #6943FF;
     padding: 34px 51px;
-    text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -43,6 +44,24 @@ body {
     line-height: 38px;
     letter-spacing: -0.03em;
     margin-bottom: 30px;
+}
+
+.unit-converter__container .unit-converter__top input {
+    border: 2px solid #eee;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+    font-size: 3.625rem;
+    width: 117px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.unit-converter__container .unit-converter__top button {
+    padding: 9px 27.5px;
+    border-radius:  5px;
+    margin-top: 27px;
+    border: 1px solid #fff;
 }
 
 
