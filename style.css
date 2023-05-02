@@ -65,3 +65,42 @@ body {
 }
 
 
+
+
+/**** Bottom ****/
+
+.unit-converter__container .unit-converter__bottom {
+    padding: 36px 25px;
+    background-color: #F4F4F4;
+
+}
+
+
+.unit-converter__container .unit-converter__bottom .unit-converter__display-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius:  4.68px;
+    padding: 31px 77px 19px 77px;
+}
+
+
+.unit-converter__container .unit-converter__bottom .unit-converter__display-box h4 {
+    font-family: Inter;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 9px;
+
+}
+
+.unit-converter__container .unit-converter__bottom .unit-converter__display-box .unit-converter__display-numbers {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+

@@ -11,14 +11,20 @@
             <div class="unit-converter__container">
                 <div class="unit-converter__top">
                     <h1>Metric/Imperial Unit Conversion</h1>
-                    <input type="text" id="number" name="number">
-                    <button>Convert</button>
+                    <input type="text" id="input_number" name="number">
+                    <button id="convert-btn">Convert</button>
                 </div>
                 <div class="unit-converter__bottom">
-
-
+                    <div class="unit-converter__display-box">
+                        <h4>Length (Meter/Feet)</h4>
+                        <div class="unit-converter__display-numbers"> 
+                            <p class="coonvertedNumber"></p>
+                            <p class="coonvertedNumber"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+    <script src="main.js"></script>
 </body>
