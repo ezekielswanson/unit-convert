@@ -11,48 +11,46 @@ let numberDisplayThree = document.getElementById('convertedNumbDisplay-3');
 
 
 
-/*** Functions  ***/
+//Storing converstion #'s in object
 
-//click event 
-// input value
-//teplate literal 
-
-
-
-//Conversion Numbers 
-
-//Feet & Meters 
-const meterToFeet =  3.281;
-const feetToMeters = 0.3048;
+let conversion = {
+    meterToFeet:  3.281,
+    feetToMeters: 0.3048,
+    literToGallon : 0.264172,
+    gallonToLiter: 3.78541,
+    kilosToPounds:  2.20462,
+    poundsToKilos: 0.453592
+}
 
 
-//Gallon & Liter
-const literToGallon = 0.264172;
-const gallonToLiter = 3.78541;
 
+//Function handle convserions 
 
-//Gallon & Liter
-const kilosToPounds = 2.20462;
-const poundsToKilos = 0.453592;
+function convertNumber(baseValue,conversionRate) {
+    return (baseValue * conversionRate).toFixed(3);
 
+}
 
 convertBtn.addEventListener("click", function() {
     let baseValue = input.value;
     
-    numberDisplay.textContent = 
-    `${baseValue} meters = ${(baseValue * meterToFeet).toFixed(3)} feet | 
-    ${baseValue} feet = ${(baseValue * feetToMeters).toFixed(3)} meters`;
 
-
-    
-    numberDisplayTwo.textContent = ` 
-    ${baseValue} liters = ${(baseValue * literToGallon).toFixed(3)} gallons | 
-    ${baseValue} gallons = ${(baseValue * gallonToLiter).toFixed(3)} liters
+    numberDisplay.textContent =
+    //Pasing in the values we want to compute? - why is function inside of template literal
+    //confused b/c the function is not a varialbe persay
+    `${baseValue} meters =  ${convertNumber(baseValue,conversion.meterToFeet)} feet | 
+    ${baseValue} feet = ${convertNumber(baseValue,conversion.feetToMeters)} meters
     `
 
-    numberDisplayThree.textContent = `
-    ${baseValue} kilos = ${(baseValue * kilosToPounds).toFixed(3)} pounds | 
-    ${baseValue} pounds = ${(baseValue * poundsToKilos).toFixed(3)} kilos
+    numberDisplayTwo.textContent = 
+    `${baseValue} liters =  ${convertNumber(baseValue,conversion.literToGallon)} gallons | 
+    ${baseValue} gallons = ${convertNumber(baseValue,conversion.gallonToLiter)} liters
+    `
+
+
+    numberDisplayThree.textContent = 
+    `${baseValue} kilos  =  ${convertNumber(baseValue,conversion.kilosToPounds)} gallons | 
+    ${baseValue} pounds = ${convertNumber(baseValue,conversion.poundsToKilos)} kilos
     `
     
 });
